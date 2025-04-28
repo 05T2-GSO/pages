@@ -1,16 +1,11 @@
 <template>
   <div id="app">
-    <Header :github-link="githubLink"
-        :presentation-link="presentationLink"
-        :report-link="reportLink"
-        :sponsor-rec-link="sponsorRecLink"/>
+    <Header :github-link="githubLink" :presentation-link="presentationLink" :report-link="reportLink"
+      :sponsor-rec-link="sponsorRecLink" />
     <div class="break"></div>
     <main class="content">
-      <Links
-        :github-link="githubLink"
-        :presentation-link="presentationLink"
-        :report-link="reportLink"
-        :sponsor-rec-link="sponsorRecLink"/>
+      <Links :github-link="githubLink" :presentation-link="presentationLink" :report-link="reportLink"
+        :sponsor-rec-link="sponsorRecLink" />
       <div class="break"></div>
       <section class="team">
         <h2>Team Members</h2>
@@ -24,7 +19,7 @@
 
       </section>
     </main>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -119,10 +114,10 @@ body,
 .break::after {
   content: "";
   display: block;
-  width: 50vw;                           
-  height: 2px;                           
+  width: 50vw;
+  height: 2px;
   background-color: var(--primary-color, #e94e77);
-  opacity: 0.4;                          
-  margin: 0.5rem auto 0;                 
+  opacity: 0.4;
+  margin: 0.5rem auto 0;
 }
 </style>

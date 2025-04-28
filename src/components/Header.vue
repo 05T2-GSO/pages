@@ -1,6 +1,8 @@
 <template>
   <div class=".header">
-    <Navbar />
+    <Navbar :github-link="githubLink" :presentation-link="presentationLink" :report-link="reportLink"
+      :sponsor-rec-link="sponsorRecLink" />
+
     <div class="page-header">
       <h1>{{ title }}</h1>
       <h2>{{ secondaryTitle }}</h2>
@@ -12,6 +14,25 @@
 <script setup>
 import { ref } from "vue";
 import Navbar from '../components/Navbar.vue';
+
+defineProps({
+  githubLink: {
+    type: String,
+    default: "#"
+  },
+  presentationLink: {
+    type: String,
+    default: "#"
+  },
+  reportLink: {
+    type: String,
+    default: "#"
+  },
+  sponsorRecLink: {
+    type: String,
+    default: "#"
+  }
+});
 
 const title = ref("05T2 - GSO Website Transformation");
 const secondaryTitle = ref("CS4850 - Senior Project, Spring 2025");

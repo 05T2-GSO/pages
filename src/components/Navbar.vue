@@ -2,17 +2,20 @@
     <nav class="navbar">
         <div class="nav-content">
             <div class="nav-title">
-                <a href="/" class="home-title">{{ title }}</a>
+                <a href="#" class="home-title">{{ title }}</a>
             </div>
             <ul class="nav-list">
                 <li>
                     <a target="_blank" :href="githubLink">GitHub</a>
                 </li>
                 <li>
-                    <a :href="documentationLink">Documentation</a>
+                    <a target="_blank" :href="presentationLink">Presentation</a>
                 </li>
                 <li>
-                    <a :href="presentationLink">Presentation</a>
+                    <a target="_blank" :href="reportLink">Report</a>
+                </li>
+                <li>
+                    <a target="_blank" :href="sponsorRecLink">Recommendations</a>
                 </li>
             </ul>
         </div>
@@ -22,12 +25,27 @@
 <script setup>
 
 import { ref } from 'vue';
-const title = ref("GSO Website Transformation");
-const githubLink = ref("https://github.com/05T2-GSO/");
 
-// Change these links to the actual URLs of the deliverables
-const documentationLink = ref("https://example.com/documentation");
-const presentationLink = ref("https://example.com/presentation");
+defineProps({
+    githubLink: {
+        type: String,
+        default: "#"
+    },
+    presentationLink: {
+        type: String,
+        default: "#"
+    },
+    reportLink: {
+        type: String,
+        default: "#"
+    },
+    sponsorRecLink: {
+        type: String,
+        default: "#"
+    }
+});
+
+const title = ref("GSO Website Transformation");
 </script>
 
 <style scoped>
@@ -62,7 +80,8 @@ const presentationLink = ref("https://example.com/presentation");
     padding: 0;
 }
 
-.nav-list a, .nav-title a {
+.nav-list a,
+.nav-title a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -70,30 +89,30 @@ const presentationLink = ref("https://example.com/presentation");
 }
 
 .nav-list a {
-  position: relative;          
-  display: inline-block;       
-  text-decoration: none;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .nav-list a:hover {
-  color: #fff;
-  background-color: var(--primary-color);
+    color: #fff;
+    background-color: var(--primary-color);
 }
 
 .nav-list a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;                
-  width: 100%;
-  height: 2px;                 
-  background-color: #fff;  
-  transform: scaleX(0);        
-  transform-origin: center;    
-  transition: transform 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
 }
 
 .nav-list a:hover::after {
-  transform: scaleX(1);        
+    transform: scaleX(1);
 }
 </style>

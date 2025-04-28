@@ -1,9 +1,16 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header :github-link="githubLink"
+        :presentation-link="presentationLink"
+        :report-link="reportLink"
+        :sponsor-rec-link="sponsorRecLink"/>
     <div class="break"></div>
     <main class="content">
-      <Links/>
+      <Links
+        :github-link="githubLink"
+        :presentation-link="presentationLink"
+        :report-link="reportLink"
+        :sponsor-rec-link="sponsorRecLink"/>
       <div class="break"></div>
       <section class="team">
         <h2>Team Members</h2>
@@ -22,6 +29,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Links from './components/Links.vue';
@@ -30,6 +39,14 @@ import noah_bio from './assets/bio_pics/noah_bio.webp';
 import jonathan_bio from './assets/bio_pics/jonathan_bio.webp';
 import kevin_bio from './assets/bio_pics/kevin_bio.webp';
 import rashmi_bio from './assets/bio_pics/rashmi_bio.webp';
+
+import reportLink from './assets/pdfs/final-report.pdf';
+import sponsorRecLink from './assets/pdfs/sponsor-recommendations.pdf';
+const githubLink = ref("https://github.com/05T2-GSO/");
+
+// Change these links to the actual URLs of the deliverables
+const presentationLink = ref("https://example.com/presentation");
+
 
 import { reactive } from 'vue';
 

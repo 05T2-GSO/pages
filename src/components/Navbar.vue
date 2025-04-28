@@ -35,7 +35,6 @@ const presentationLink = ref("https://example.com/presentation");
     font-size: 2rem;
     font-weight: bold;
     color: #f1f1f1;
-    /* Adjust to your theme color */
     text-decoration: none;
 }
 
@@ -70,7 +69,31 @@ const presentationLink = ref("https://example.com/presentation");
     font-size: large;
 }
 
+.nav-list a {
+  position: relative;          
+  display: inline-block;       
+  text-decoration: none;
+}
+
 .nav-list a:hover {
-    opacity: 0.8;
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;                
+  width: 100%;
+  height: 2px;                 
+  background-color: #fff;  
+  transform: scaleX(0);        
+  transform-origin: center;    
+  transition: transform 0.3s ease;
+}
+
+.nav-list a:hover::after {
+  transform: scaleX(1);        
 }
 </style>

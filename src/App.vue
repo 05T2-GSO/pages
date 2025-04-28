@@ -48,7 +48,7 @@ const team = reactive([
   --background-color: #fff;
   /* White */
   --background-light: #fff;
-  /*  */
+  /* Same as background color, decided not to have to backgrounds.  */
   --text-color: #333333;
   /* dark gray */
 }
@@ -102,10 +102,10 @@ body,
 .break::after {
   content: "";
   display: block;
-  width: 50vw;                           /* length of the line */
-  height: 2px;                           /* thickness */
+  width: 50vw;                           
+  height: 2px;                           
   background-color: var(--primary-color, #e94e77);
-  opacity: 0.4;                          /* soft/faint look */
-  margin: 0.5rem auto 0;                 /* gap above, centered */
+  opacity: 0.4;                          
+  margin: 0.5rem auto 0;                 
 }
 </style>

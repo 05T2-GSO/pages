@@ -15,7 +15,7 @@
                     <a target="_blank" :href="reportLink">Report</a>
                 </li>
                 <li>
-                    <a target="_blank" :href="sponsorRecLink">Recommendations</a>
+                    <a target="_blank" :href="sponsorRecLink">Sponsor Guide</a>
                 </li>
             </ul>
         </div>

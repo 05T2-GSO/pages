@@ -5,7 +5,7 @@
       <a :href="githubLink" target="_blank" class="cta-button">GitHub</a>
       <a :href="presentationLink" target="_blank" class="cta-button">Presentation</a>
       <a :href="reportLink" target="_blank" class="cta-button">Final Report</a>
-      <a :href="sponsorRecLink" target="_blank" class="cta-button">Sponsor Recommendations</a>
+      <a :href="sponsorRecLink" target="_blank" class="cta-button">Sponsor Guide</a>
     </div>
   </section>
 </template>

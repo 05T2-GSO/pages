@@ -16,7 +16,6 @@
             <p>{{ member.role }}</p>
           </div>
         </div>
-
       </section>
     </main>
     <Footer />
@@ -36,11 +35,9 @@ import kevin_bio from './assets/bio_pics/kevin_bio.webp';
 import rashmi_bio from './assets/bio_pics/rashmi_bio.webp';
 
 import reportLink from './assets/pdfs/final-report.pdf';
-import sponsorRecLink from './assets/pdfs/sponsor-recommendations.pdf';
+import sponsorRecLink from './assets/pdfs/sponsor-guide.pdf';
 const githubLink = ref("https://github.com/05T2-GSO/");
-
-// Change these links to the actual URLs of the deliverables
-const presentationLink = ref("https://example.com/presentation");
+const presentationLink = ref("https://www.youtube.com/watch?v=8WLHfluXcOQ");
 
 
 import { reactive } from 'vue';
